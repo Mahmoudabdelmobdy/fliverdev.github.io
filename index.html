@@ -3,18 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Fliver Dev</title>
+    <title>Fliver Rider</title>
     <script>
-        function isIOS() {
-            var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-            return iOS;
-        }
-
         function openLink() {
-            if (isIOS) {
+            if (/Android/i.test(navigator.userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=dev.fliver.rider";
+            } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
                 window.location.href = "https://www.apple.com/ios/app-store/";
             } else {
-                window.location.href = "https://play.google.com/store/apps/details?id=dev.fliver.rider";
+                window.location.href = "https://github.com/fliverdev/rider";
             }
         }
     </script>
