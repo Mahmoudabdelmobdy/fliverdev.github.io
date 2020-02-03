@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Fliver Dev</title>
-    </head>
-    <body>
-        <h1>Hello, world!</h1>
-        <h2>This website is just a placeholder (for now!)</h2>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fliver Dev</title>
+    <script>
+        function isIOS() {
+            var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+            return iOS;
+        }
+
+        function openLink() {
+            if (isIOS) {
+                window.location.href = "https://www.apple.com/ios/app-store/";
+            } else {
+                window.location.href = "https://play.google.com/store/apps/details?id=dev.fliver.rider";
+            }
+        }
+    </script>
+</head>
+
+<body onload="openLink()"></body>
+
 </html>
